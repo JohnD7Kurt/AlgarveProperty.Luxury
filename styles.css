@@ -375,13 +375,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.card-index {
-  display: block;
-  margin-bottom: 80px;
-  color: var(--clay);
-  font-weight: 800;
-}
-
 .image-card {
   position: relative;
   overflow: hidden;
@@ -411,8 +404,7 @@ h3 {
   padding: clamp(24px, 4vw, 38px);
 }
 
-.image-card p,
-.image-card .card-index {
+.image-card p {
   color: rgba(255, 253, 248, 0.82);
 }
 
@@ -443,7 +435,7 @@ h3 {
 }
 
 .locations::before {
-  background-image: url("assets/algarve-hero.png");
+  background-image: url("assets/real-lagos-ponta-da-piedade.jpg");
   background-size: cover;
   background-position: center 58%;
   opacity: 0.2;
@@ -836,10 +828,6 @@ h3 {
   .hero-panel {
     grid-template-columns: 1fr;
     margin-top: 42px;
-  }
-
-  .card-index {
-    margin-bottom: 48px;
   }
 
   .feature-card {
