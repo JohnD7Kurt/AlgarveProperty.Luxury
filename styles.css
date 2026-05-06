@@ -483,26 +483,57 @@ h3 {
 }
 
 .location-strip article {
+  position: relative;
+  overflow: hidden;
   min-height: 260px;
-  padding: clamp(20px, 3vw, 30px);
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
   border: 1px solid rgba(255, 253, 248, 0.18);
   border-radius: 8px;
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.12), rgba(255, 253, 248, 0.06));
+  background: rgba(255, 253, 248, 0.08);
   box-shadow: 0 24px 70px rgba(4, 28, 32, 0.24);
-  backdrop-filter: blur(14px);
-  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.location-strip article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(5, 40, 46, 0.93), rgba(5, 40, 46, 0.42) 55%, rgba(5, 40, 46, 0.1)),
+    linear-gradient(90deg, rgba(5, 40, 46, 0.5), transparent 72%);
+}
+
+.location-strip img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 520ms ease;
+}
+
+.location-strip article > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(20px, 3vw, 28px);
 }
 
 .location-strip article:hover {
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.18), rgba(255, 253, 248, 0.08));
   border-color: rgba(216, 177, 105, 0.5);
   transform: translateY(-4px);
+}
+
+.location-strip article:hover img {
+  transform: scale(1.04);
 }
 
 .location-strip span {
   display: block;
   min-height: 34px;
-  margin-bottom: 44px;
+  margin-bottom: 54px;
   color: var(--gold);
   font-size: 0.72rem;
   font-weight: 800;
@@ -613,6 +644,26 @@ h3 {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.4vw, 2rem);
   line-height: 1.08;
+}
+
+.market-copy > p:not(.section-kicker) {
+  max-width: 620px;
+  color: rgba(255, 253, 248, 0.72);
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+}
+
+.source-note {
+  margin-top: 26px;
+  font-size: 0.84rem !important;
+}
+
+.market-insight .journal-grid a {
+  min-height: 190px;
+}
+
+.market-insight .journal-grid p {
+  margin: 0;
+  color: rgba(255, 253, 248, 0.68);
 }
 
 .contact {
@@ -800,12 +851,12 @@ h3 {
   }
 
   .location-strip article {
-    min-height: 190px;
+    min-height: 320px;
   }
 
   .location-strip span {
     min-height: 0;
-    margin-bottom: 28px;
+    margin-bottom: 58px;
   }
 
   .advisory-image {
