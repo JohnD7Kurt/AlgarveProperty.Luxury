@@ -658,6 +658,17 @@ h3 {
   color: rgba(255, 253, 248, 0.68);
 }
 
+.source-link {
+  width: fit-content;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .contact {
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 520px);

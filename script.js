@@ -16,6 +16,18 @@ const heroOptions = {
     src: "assets/hero-option-benagil-cave.jpg",
     alt: "Real photograph of Benagil Cave and water in the Algarve",
   },
+  marinhaBlue: {
+    src: "assets/hero-option-marinha-sunrise.jpg",
+    alt: "Real photograph of Praia da Marinha cliffs and blue Atlantic water",
+  },
+  falesia: {
+    src: "assets/hero-option-falesia-cliffs.jpg",
+    alt: "Real photograph of Praia da Falesia red cliffs and beach",
+  },
+  benagilPanorama: {
+    src: "assets/hero-option-benagil-panorama.jpg",
+    alt: "Real photograph from inside Benagil Cave with turquoise water",
+  },
 };
 
 const selectedHero = new URLSearchParams(window.location.search).get("hero");
